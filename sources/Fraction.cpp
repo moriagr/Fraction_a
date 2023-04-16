@@ -25,36 +25,46 @@ namespace ariel
         {
             return numerator;
         }
-        Fraction operator+(const Fraction &other) const
-        {
-        }
-        Fraction operator-(const Fraction &other) const
-        {
-        }
-        Fraction operator*(const Fraction &other) const
-        {
-        }
-        Fraction operator/(const Fraction &other) const
-        {
-        }
-        Fraction operator==(const Fraction &other) const
-        {
-        }
-        Fraction operator!=(const Fraction &other) const
-        {
-        }
-        Fraction operator<(const Fraction &other) const
-        {
-        }
-        Fraction operator>(const Fraction &other) const
-        {
-        }
-        Fraction operator<=(const Fraction &other) const
-        {
-        }
-        Fraction operator>=(const Fraction &other) const
-        {
-        }
+        Fraction &operator*(const Fraction &fraction) {}
+        friend Fraction &operator*(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator*(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator/(const Fraction &fraction) {}
+        friend Fraction &operator/(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator/(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator+(const Fraction &fraction) {}
+        friend Fraction &operator+(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator+(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator-(const Fraction &fraction) {}
+        friend Fraction &operator-(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator-(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator==(const Fraction &fraction);
+        friend Fraction &operator==(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator==(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator!=(const Fraction &fraction) {}
+        friend Fraction &operator!=(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator!=(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator<(const Fraction &fraction) {}
+        friend Fraction &operator<(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator<(float fraction1, const Fraction &fraction2) {}
+
+        bool &operator>(const Fraction &fraction) {}
+        friend Fraction &operator>(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator>(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator<=(const Fraction &fraction) {}
+        friend Fraction &operator<=(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator<=(float fraction1, const Fraction &fraction2) {}
+
+        Fraction &operator>=(const Fraction &fraction) {}
+        friend Fraction &operator>=(const Fraction &fraction1, float fraction2) {}
+        friend Fraction &operator>=(float fraction1, const Fraction &fraction2) {}
+
         // pre-increment
         Fraction &operator++()
         {
@@ -75,18 +85,6 @@ namespace ariel
         {
         }
         friend std::istream &operator>>(std::istream &input, const Fraction &fraction)
-        {
-        }
-        Fraction &operator*(const Fraction &fraction)
-        {
-        }
-        Fraction &operator+(const Fraction &fraction)
-        {
-        }
-        Fraction &operator-(const Fraction &fraction)
-        {
-        }
-        Fraction &operator/(const Fraction &fraction)
         {
         }
     };
