@@ -5,16 +5,22 @@
 using namespace std;
 using namespace ariel;
 
-// TEST_CASE("The amount of cards before starting a game")
-// {
-//     Player p1("Alice");
-//     Player p2("Bob");
+TEST_CASE("Test original fraction")
+{
+    Fraction f1 = Fraction(1, 2);
 
-//     CHECK(p1.stacksize() == 0);
-//     CHECK(p2.stacksize() == 0);
-//     CHECK(p1.cardesTaken() == 0);
-//     CHECK(p2.cardesTaken() == 0);
-// }
+    CHECK(f1.getNumerator() == 1);
+    CHECK(f1.getDenominator() == 2);
+}
+
+TEST_CASE("Test increment and decrement operators")
+{
+    Fraction f1 = Fraction(1, 2);
+
+    CHECK((++f1).getNumerator() == 3);
+    CHECK_NOTHROW(++++++++++++++++++f1);
+    CHECK(f1.getNumerator() == 21); // 2*9 + 3
+}
 
 // TEST_CASE("The amount of cards after starting a game")
 // {

@@ -14,8 +14,8 @@ namespace ariel
 
     Fraction::Fraction(float other)
     {
-        this->numerator = other * 100;
-        this->denominator = 100;
+        this->numerator = other * 1000;
+        this->denominator = 1000;
     }
     Fraction::Fraction(const Fraction &other)
     {
