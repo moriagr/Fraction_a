@@ -8,6 +8,12 @@ using namespace std;
 namespace ariel
 {
 
+    Fraction::Fraction()
+    {
+        this->numerator = 0;
+        this->denominator = 1;
+    }
+
     Fraction::Fraction(int num, int den) : numerator(num), denominator(den)
     {
     }
@@ -75,9 +81,10 @@ namespace ariel
     {
         return (output << fraction.numerator << '/' << fraction.denominator);
     }
-    std::istream &operator>>(std::istream &input, const Fraction &fraction)
+    Fraction operator>>(std::istream &input, const Fraction &fraction)
     {
-        return (input >> fraction.numerator >> '/' >> fraction.denominator);
+
+        return fraction;
     }
     Fraction operator*(const Fraction &fraction1, const Fraction &fraction2)
     {

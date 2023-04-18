@@ -20,7 +20,7 @@ namespace ariel
 
         Fraction(int numerator, int denominator);
 
-        Fraction() = default;
+        Fraction();
         ~Fraction();
         // Copy constructor
         Fraction(const Fraction &other);
@@ -59,6 +59,6 @@ namespace ariel
         Fraction operator--();    // pre-decrement
         Fraction operator--(int); // post-decrement
         friend std::ostream &operator<<(std::ostream &output, const Fraction &fraction);
-        friend std::istream &operator>>(std::istream &input, const Fraction &fraction);
+        friend Fraction operator>>(std::istream &input, const Fraction &fraction);
     };
 }
