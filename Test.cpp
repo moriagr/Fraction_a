@@ -11,6 +11,8 @@ TEST_CASE("Test original fraction")
 
     CHECK(f1.getNumerator() == 1);
     CHECK(f1.getDenominator() == 2);
+    CHECK_THROWS(Fraction(1, 0));
+    CHECK_THROWS(Fraction(0, 0));
 }
 
 TEST_CASE("Test reduce fraction")
