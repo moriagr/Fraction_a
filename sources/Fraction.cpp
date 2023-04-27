@@ -27,11 +27,11 @@ namespace ariel
     {
         Fraction(other.numerator, other.denominator);
     }
-    int Fraction::getDenominator()
+    int Fraction::getDenominator() const
     {
         return denominator;
     }
-    int Fraction::getNumerator()
+    int Fraction::getNumerator() const
     {
         return numerator;
     }
@@ -79,8 +79,9 @@ namespace ariel
 
     std::ostream &operator<<(std::ostream &output, const Fraction &fraction)
     {
-        return (output << fraction.numerator << '/' << fraction.denominator);
+        return (output << fraction.getNumerator() << '/' << fraction.getDenominator());
     }
+
     Fraction operator>>(std::istream &input, const Fraction &fraction)
     {
 

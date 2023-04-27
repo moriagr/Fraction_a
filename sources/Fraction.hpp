@@ -31,8 +31,8 @@ namespace ariel
         // Move constructor
         Fraction(Fraction &&other) noexcept;
 
-        int getDenominator();
-        int getNumerator();
+        int getDenominator() const;
+        int getNumerator() const;
 
         friend Fraction operator*(const Fraction &fraction1, const Fraction &fraction2);
 
